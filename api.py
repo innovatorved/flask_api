@@ -3,7 +3,8 @@
 from flask import Flask
 from flask import render_template ,redirect ,url_for ,jsonify
 
-str n = 0
+global n
+
 # only a sample file 
 # Main file is : login.py
 # Genral introduction to Python  flask library
@@ -30,7 +31,7 @@ def login():
     return "this is output"
 
 @app.route('/innovatorved/<string:n>')
-def add():
+def add(n):
     return "Done"
 
 @app.route('/data')
