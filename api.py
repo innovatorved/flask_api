@@ -1,12 +1,23 @@
 #flash framework - which is micro framework
 
 from flask import Flask
-from flask import render_template ,redirect ,url_for
+from flask import render_template ,redirect ,url_for ,jsonify
 
 # only a sample file 
 # Main file is : login.py
 # Genral introduction to Python  flask library
+file = [
+		{
+			'id':0,
+			"value":1
+		},
+		{
+			'id':1,
+			"value":5
+		}
 
+
+]
 app = Flask(__name__)
 
 @app.route('/')
@@ -16,6 +27,10 @@ def index():
 @app.route('/login')
 def login():
     return "this is output"
+
+@app.route('/data')
+def data01():
+    return jsonify(file)
 
 if __name__ == '__main__':
     app.run(debug=True)
