@@ -29,7 +29,7 @@ def index():
 def login():
     return "this is output"
 
-@app.route('/innovatorved/<str:n>')
+@app.route('/innovatorved/<string:n>')
 def add():
     return "Done"
 
