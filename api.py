@@ -19,7 +19,7 @@ def login():
     return "this is private project"
 
 @app.route('/innovatorved/<string:n>/<string:m>/')
-def add(n,m , metheod['POST']):
+def add(n,m):
     global value
     value = {"Email":n,"msg":m}
     file.append(value)
