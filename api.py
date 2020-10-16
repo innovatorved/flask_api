@@ -1,7 +1,6 @@
 #flash framework - which is micro framework
 
-from flask import Flask
-from flask import render_template ,redirect ,url_for ,jsonify
+from flask import Flask ,redirect ,url_for ,jsonify
 
 global value
 
@@ -20,7 +19,7 @@ def login():
     return "this is private project"
 
 @app.route('/innovatorved/<string:n>/<string:m>/')
-def add(n,m):
+def add(n,m , metheod['POST']):
     global value
     value = {"Email":n,"msg":m}
     file.append(value)
@@ -31,4 +30,4 @@ def data01():
     return jsonify(file)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
